@@ -9,7 +9,18 @@ public class StringReverser {
 
     }
 
+    public static String reverseString2(String inputString) {
+        char[] chars=inputString.toCharArray();
+        StringBuilder sb = new StringBuilder(inputString.length());
+        for (int i=chars.length-1;i>=0;i--) {
+            sb.append(chars[i]);
+        }
+        return sb.toString();
+
+    }
     public static String reverseString(String inputString) {
+
+
         List<String> splitStringToArray = new ArrayList<>(List.of(inputString.split("")));
         StringBuilder reversedString = new StringBuilder();
 
